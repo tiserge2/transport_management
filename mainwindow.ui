@@ -2,6 +2,9 @@
 <ui version="4.0">
  <class>MainWindow</class>
  <widget class="QMainWindow" name="MainWindow">
+  <property name="windowModality">
+   <enum>Qt::NonModal</enum>
+  </property>
   <property name="enabled">
    <bool>true</bool>
   </property>
@@ -26,14 +29,18 @@
    </size>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>Gestionnaire de transport</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="ressources.qrc">
+    <normaloff>:/images/src/busHeader.png</normaloff>:/images/src/busHeader.png</iconset>
   </property>
   <widget class="QWidget" name="centralWidget">
    <widget class="QWidget" name="verticalLayoutWidget">
     <property name="geometry">
      <rect>
-      <x>0</x>
-      <y>0</y>
+      <x>10</x>
+      <y>-20</y>
       <width>831</width>
       <height>521</height>
      </rect>
@@ -66,7 +73,7 @@
         <enum>QTabWidget::Rounded</enum>
        </property>
        <property name="currentIndex">
-        <number>1</number>
+        <number>0</number>
        </property>
        <property name="iconSize">
         <size>
@@ -95,7 +102,7 @@
        <widget class="QWidget" name="tab_voyage">
         <attribute name="icon">
          <iconset resource="ressources.qrc">
-          <normaloff>:/images/src/road.png</normaloff>:/images/src/road.png</iconset>
+          <normaloff>:/images/src/road-with-broken-line.png</normaloff>:/images/src/road-with-broken-line.png</iconset>
         </attribute>
         <attribute name="title">
          <string>Voyage</string>
@@ -117,27 +124,78 @@
            <widget class="QColumnView" name="columnView"/>
           </item>
           <item>
+           <spacer name="horizontalSpacer">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
            <layout class="QHBoxLayout" name="horizontalLayout">
             <item>
-             <widget class="QPushButton" name="pushButton_2">
+             <spacer name="horizontalSpacer_11">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>40</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item>
+             <widget class="QPushButton" name="boutonAjouterVoyage">
               <property name="text">
                <string>Ajouter Voyage</string>
               </property>
+              <property name="icon">
+               <iconset resource="ressources.qrc">
+                <normaloff>:/images/src/add.png</normaloff>:/images/src/add.png</iconset>
+              </property>
              </widget>
             </item>
             <item>
-             <widget class="QPushButton" name="pushButton_3">
+             <widget class="QPushButton" name="boutonModifierVoyage">
               <property name="text">
                <string>Editer Voyage</string>
               </property>
+              <property name="icon">
+               <iconset resource="ressources.qrc">
+                <normaloff>:/images/src/edit.png</normaloff>:/images/src/edit.png</iconset>
+              </property>
              </widget>
             </item>
             <item>
-             <widget class="QPushButton" name="pushButton">
+             <widget class="QPushButton" name="boutonSupprimerVoyage">
               <property name="text">
                <string>Supprimer Voyage</string>
               </property>
+              <property name="icon">
+               <iconset resource="ressources.qrc">
+                <normaloff>:/images/src/delete.png</normaloff>:/images/src/delete.png</iconset>
+              </property>
              </widget>
+            </item>
+            <item>
+             <spacer name="horizontalSpacer_12">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>40</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
             </item>
            </layout>
           </item>
@@ -150,7 +208,7 @@
         </property>
         <attribute name="icon">
          <iconset resource="ressources.qrc">
-          <normaloff>:/images/src/bus.png</normaloff>:/images/src/bus.png</iconset>
+          <normaloff>:/images/src/icon.png</normaloff>:/images/src/icon.png</iconset>
         </attribute>
         <attribute name="title">
          <string>Bus</string>
@@ -169,27 +227,78 @@
            <widget class="QTableView" name="tableView"/>
           </item>
           <item>
+           <spacer name="horizontalSpacer_3">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
            <layout class="QHBoxLayout" name="horizontalLayout_2">
             <item>
-             <widget class="QPushButton" name="pushButton_6">
+             <spacer name="horizontalSpacer_9">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>40</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item>
+             <widget class="QPushButton" name="boutonAjouterBus">
               <property name="text">
                <string>Ajouter Bus</string>
               </property>
+              <property name="icon">
+               <iconset resource="ressources.qrc">
+                <normaloff>:/images/src/add.png</normaloff>:/images/src/add.png</iconset>
+              </property>
              </widget>
             </item>
             <item>
-             <widget class="QPushButton" name="pushButton_5">
+             <widget class="QPushButton" name="boutonModifierBus">
               <property name="text">
                <string>Modifier Bus</string>
               </property>
+              <property name="icon">
+               <iconset resource="ressources.qrc">
+                <normaloff>:/images/src/edit.png</normaloff>:/images/src/edit.png</iconset>
+              </property>
              </widget>
             </item>
             <item>
-             <widget class="QPushButton" name="pushButton_4">
+             <widget class="QPushButton" name="boutonSupprimerBus">
               <property name="text">
                <string>Supprimer Bus</string>
               </property>
+              <property name="icon">
+               <iconset resource="ressources.qrc">
+                <normaloff>:/images/src/delete.png</normaloff>:/images/src/delete.png</iconset>
+              </property>
              </widget>
+            </item>
+            <item>
+             <spacer name="horizontalSpacer_10">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>40</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
             </item>
            </layout>
           </item>
@@ -199,7 +308,7 @@
        <widget class="QWidget" name="tab_conducteur">
         <attribute name="icon">
          <iconset resource="ressources.qrc">
-          <normaloff>:/images/src/driver.png</normaloff>:/images/src/driver.png</iconset>
+          <normaloff>:/images/src/driver32.png</normaloff>:/images/src/driver32.png</iconset>
         </attribute>
         <attribute name="title">
          <string>Conducteur</string>
@@ -218,27 +327,78 @@
            <widget class="QTableView" name="tableView_2"/>
           </item>
           <item>
+           <spacer name="horizontalSpacer_2">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
            <layout class="QHBoxLayout" name="horizontalLayout_3">
             <item>
-             <widget class="QPushButton" name="pushButton_9">
+             <spacer name="horizontalSpacer_7">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>40</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item>
+             <widget class="QPushButton" name="boutonAjouterConducteur">
               <property name="text">
                <string>Ajouter Conducteur</string>
               </property>
+              <property name="icon">
+               <iconset resource="ressources.qrc">
+                <normaloff>:/images/src/add.png</normaloff>:/images/src/add.png</iconset>
+              </property>
              </widget>
             </item>
             <item>
-             <widget class="QPushButton" name="pushButton_8">
+             <widget class="QPushButton" name="boutonModifierConducteur">
               <property name="text">
                <string>Modifier Conducteur</string>
               </property>
+              <property name="icon">
+               <iconset resource="ressources.qrc">
+                <normaloff>:/images/src/edit.png</normaloff>:/images/src/edit.png</iconset>
+              </property>
              </widget>
             </item>
             <item>
-             <widget class="QPushButton" name="pushButton_7">
+             <widget class="QPushButton" name="boutonSupprimerConducteur">
               <property name="text">
                <string>Supprimer Conducteur</string>
               </property>
+              <property name="icon">
+               <iconset resource="ressources.qrc">
+                <normaloff>:/images/src/delete.png</normaloff>:/images/src/delete.png</iconset>
+              </property>
              </widget>
+            </item>
+            <item>
+             <spacer name="horizontalSpacer_8">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>40</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
             </item>
            </layout>
           </item>
@@ -248,7 +408,7 @@
        <widget class="QWidget" name="tab_reservation">
         <attribute name="icon">
          <iconset resource="ressources.qrc">
-          <normaloff>:/images/src/booking.png</normaloff>:/images/src/booking.png</iconset>
+          <normaloff>:/images/src/clipboard-with-pencil-.png</normaloff>:/images/src/clipboard-with-pencil-.png</iconset>
         </attribute>
         <attribute name="title">
          <string>Reservation</string>
@@ -267,27 +427,78 @@
            <widget class="QTableView" name="tableView_3"/>
           </item>
           <item>
+           <spacer name="horizontalSpacer_4">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
            <layout class="QHBoxLayout" name="horizontalLayout_4">
             <item>
-             <widget class="QPushButton" name="pushButton_12">
+             <spacer name="horizontalSpacer_5">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>40</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item>
+             <widget class="QPushButton" name="boutonAjouterReservation">
               <property name="text">
                <string>Ajouter Reservation</string>
               </property>
+              <property name="icon">
+               <iconset resource="ressources.qrc">
+                <normaloff>:/images/src/add.png</normaloff>:/images/src/add.png</iconset>
+              </property>
              </widget>
             </item>
             <item>
-             <widget class="QPushButton" name="pushButton_11">
+             <widget class="QPushButton" name="boutonModifierReservation">
               <property name="text">
                <string>Modifier Reservation</string>
               </property>
+              <property name="icon">
+               <iconset resource="ressources.qrc">
+                <normaloff>:/images/src/edit.png</normaloff>:/images/src/edit.png</iconset>
+              </property>
              </widget>
             </item>
             <item>
-             <widget class="QPushButton" name="pushButton_10">
+             <widget class="QPushButton" name="boutonSupprimerReservation">
               <property name="text">
                <string>Supprimer Reservation</string>
               </property>
+              <property name="icon">
+               <iconset resource="ressources.qrc">
+                <normaloff>:/images/src/delete.png</normaloff>:/images/src/delete.png</iconset>
+              </property>
              </widget>
+            </item>
+            <item>
+             <spacer name="horizontalSpacer_6">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>40</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
             </item>
            </layout>
           </item>
@@ -312,20 +523,25 @@
     <property name="title">
      <string>Parametres</string>
     </property>
+    <addaction name="actionChanger_Langue"/>
+    <addaction name="actionChanger_Theme"/>
    </widget>
    <widget class="QMenu" name="menuA_Propos">
     <property name="title">
      <string>A Propos</string>
     </property>
+    <addaction name="actionAide"/>
+    <addaction name="actionNotre_Equipe"/>
    </widget>
-   <widget class="QMenu" name="menuAide">
+   <widget class="QMenu" name="menuQuitter">
     <property name="title">
-     <string>Aide</string>
+     <string>Quitter</string>
     </property>
+    <addaction name="actionQuitter_le_programme"/>
    </widget>
    <addaction name="menuParametre"/>
    <addaction name="menuA_Propos"/>
-   <addaction name="menuAide"/>
+   <addaction name="menuQuitter"/>
   </widget>
   <widget class="QToolBar" name="mainToolBar">
    <attribute name="toolBarArea">
@@ -334,12 +550,130 @@
    <attribute name="toolBarBreak">
     <bool>false</bool>
    </attribute>
+   <addaction name="actionAjouter_Bus"/>
+   <addaction name="separator"/>
+   <addaction name="actionAjouter_Conducteur"/>
+   <addaction name="separator"/>
+   <addaction name="actionAjouter_Voyage"/>
+   <addaction name="separator"/>
+   <addaction name="actionAjouter_Reservation"/>
   </widget>
   <widget class="QStatusBar" name="statusBar"/>
+  <action name="actionAide">
+   <property name="text">
+    <string>Aide</string>
+   </property>
+  </action>
+  <action name="actionNotre_Equipe">
+   <property name="text">
+    <string>Notre Equipe</string>
+   </property>
+  </action>
+  <action name="actionChanger_Langue">
+   <property name="text">
+    <string>Changer Langue</string>
+   </property>
+  </action>
+  <action name="actionChanger_Theme">
+   <property name="text">
+    <string>Changer Theme</string>
+   </property>
+  </action>
+  <action name="actionAjouter_Bus">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="ressources.qrc">
+     <normaloff>:/images/src/bus.png</normaloff>:/images/src/bus.png</iconset>
+   </property>
+   <property name="text">
+    <string>Ajouter  Bus</string>
+   </property>
+   <property name="toolTip">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Presser pour ajouter un nouveau bus&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+  </action>
+  <action name="actionAjouter_Conducteur">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="ressources.qrc">
+     <normaloff>:/images/src/driver.png</normaloff>:/images/src/driver.png</iconset>
+   </property>
+   <property name="text">
+    <string>Ajouter Conducteur</string>
+   </property>
+   <property name="toolTip">
+    <string>Appuyer pour ajouter un nouveau conducteur</string>
+   </property>
+  </action>
+  <action name="actionAjouter_Voyage">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="ressources.qrc">
+     <normaloff>:/images/src/road.png</normaloff>:/images/src/road.png</iconset>
+   </property>
+   <property name="text">
+    <string>Ajouter Voyage</string>
+   </property>
+   <property name="toolTip">
+    <string>Appuyer pour ajouter un nouveau voyage</string>
+   </property>
+  </action>
+  <action name="actionAjouter_Reservation">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>false</bool>
+   </property>
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="ressources.qrc">
+     <normaloff>:/images/src/booking.png</normaloff>:/images/src/booking.png</iconset>
+   </property>
+   <property name="text">
+    <string>Ajouter Reservation</string>
+   </property>
+   <property name="toolTip">
+    <string>Appuyer pour Ajjouter une nouvelle reservation</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::NoRole</enum>
+   </property>
+  </action>
+  <action name="actionQuitter_le_programme">
+   <property name="text">
+    <string>Quitter le programme</string>
+   </property>
+  </action>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
  <resources>
   <include location="ressources.qrc"/>
  </resources>
- <connections/>
+ <connections>
+  <connection>
+   <sender>actionQuitter_le_programme</sender>
+   <signal>triggered(bool)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>415</x>
+     <y>292</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
 </ui>

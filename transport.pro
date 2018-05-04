@@ -25,13 +25,25 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
         main.cpp \
-        mainwindow.cpp
+        mainwindow.cpp \
+    bus.cpp \
+    conducteur.cpp \
+    voyage.cpp \
+    reservation.cpp
 
 HEADERS += \
-        mainwindow.h
+        mainwindow.h \
+    bus.h \
+    conducteur.h \
+    voyage.h \
+    reservation.h
 
 FORMS += \
-        mainwindow.ui
+        mainwindow.ui \
+    bus.ui \
+    conducteur.ui \
+    voyage.ui \
+    reservation.ui
 
 DISTFILES += \
     src/bus.png \
