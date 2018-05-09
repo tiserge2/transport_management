@@ -1,0 +1,21 @@
+<RCC>
+    <qresource prefix="/images">
+        <file>bus.png</file>
+        <file>driver.png</file>
+        <file>road.png</file>
+        <file>booking.png</file>
+        <file>add.png</file>
+        <file>edit.png</file>
+        <file>delete.png</file>
+        <file>icon.png</file>
+        <file>driver32.png</file>
+        <file>road-with-broken-line.png</file>
+        <file>clipboard-with-pencil-.png</file>
+        <file>busHeader.png</file>
+        <file>splash1.gif</file>
+        <file>splashIMG.png</file>
+        <file>travelBus.png</file>
+        <file>travelbus1.png</file>
+        <file>essaie</file>
+    </qresource>
+</RCC>

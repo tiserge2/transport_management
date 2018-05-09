@@ -4,7 +4,7 @@
 #
 #-------------------------------------------------
 
-QT       += core gui
+QT       += core gui sql
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -24,22 +24,24 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 
 SOURCES += \
-        main.cpp \
-        mainwindow.cpp \
+    main.cpp \
+    mainwindow.cpp \
     bus.cpp \
     conducteur.cpp \
     voyage.cpp \
-    reservation.cpp
+    reservation.cpp \
+    basededonnee.cpp
 
 HEADERS += \
-        mainwindow.h \
+    mainwindow.h \
     bus.h \
     conducteur.h \
     voyage.h \
-    reservation.h
+    reservation.h \
+    basededonnee.h
 
 FORMS += \
-        mainwindow.ui \
+    mainwindow.ui \
     bus.ui \
     conducteur.ui \
     voyage.ui \
@@ -49,9 +51,10 @@ DISTFILES += \
     src/bus.png \
     src/driver.png \
     src/booking.png \
-    src/road.png
+    src/road.png \
+    src/essaie \
 
 RESOURCES += \
-    ressources.qrc
+    src/ressources.qrc
 
 

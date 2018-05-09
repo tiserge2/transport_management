@@ -32,8 +32,8 @@
    <string>Gestionnaire de transport</string>
   </property>
   <property name="windowIcon">
-   <iconset resource="ressources.qrc">
-    <normaloff>:/images/src/busHeader.png</normaloff>:/images/src/busHeader.png</iconset>
+   <iconset resource="src/ressources.qrc">
+    <normaloff>:/images/busHeader.png</normaloff>:/images/busHeader.png</iconset>
   </property>
   <widget class="QWidget" name="centralWidget">
    <widget class="QWidget" name="verticalLayoutWidget">
@@ -66,6 +66,9 @@
        <property name="autoFillBackground">
         <bool>false</bool>
        </property>
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
        <property name="tabPosition">
         <enum>QTabWidget::South</enum>
        </property>
@@ -73,7 +76,7 @@
         <enum>QTabWidget::Rounded</enum>
        </property>
        <property name="currentIndex">
-        <number>0</number>
+        <number>2</number>
        </property>
        <property name="iconSize">
         <size>
@@ -82,10 +85,10 @@
         </size>
        </property>
        <property name="elideMode">
-        <enum>Qt::ElideRight</enum>
+        <enum>Qt::ElideLeft</enum>
        </property>
        <property name="usesScrollButtons">
-        <bool>true</bool>
+        <bool>false</bool>
        </property>
        <property name="documentMode">
         <bool>true</bool>
@@ -101,8 +104,8 @@
        </property>
        <widget class="QWidget" name="tab_voyage">
         <attribute name="icon">
-         <iconset resource="ressources.qrc">
-          <normaloff>:/images/src/road-with-broken-line.png</normaloff>:/images/src/road-with-broken-line.png</iconset>
+         <iconset resource="src/ressources.qrc">
+          <normaloff>:/images/road-with-broken-line.png</normaloff>:/images/road-with-broken-line.png</iconset>
         </attribute>
         <attribute name="title">
          <string>Voyage</string>
@@ -121,7 +124,7 @@
            <number>6</number>
           </property>
           <item>
-           <widget class="QColumnView" name="columnView"/>
+           <widget class="QTableView" name="tableViewVoyage"/>
           </item>
           <item>
            <spacer name="horizontalSpacer">
@@ -157,8 +160,8 @@
                <string>Ajouter Voyage</string>
               </property>
               <property name="icon">
-               <iconset resource="ressources.qrc">
-                <normaloff>:/images/src/add.png</normaloff>:/images/src/add.png</iconset>
+               <iconset resource="src/ressources.qrc">
+                <normaloff>:/images/add.png</normaloff>:/images/add.png</iconset>
               </property>
              </widget>
             </item>
@@ -168,8 +171,8 @@
                <string>Editer Voyage</string>
               </property>
               <property name="icon">
-               <iconset resource="ressources.qrc">
-                <normaloff>:/images/src/edit.png</normaloff>:/images/src/edit.png</iconset>
+               <iconset resource="src/ressources.qrc">
+                <normaloff>:/images/edit.png</normaloff>:/images/edit.png</iconset>
               </property>
              </widget>
             </item>
@@ -179,8 +182,8 @@
                <string>Supprimer Voyage</string>
               </property>
               <property name="icon">
-               <iconset resource="ressources.qrc">
-                <normaloff>:/images/src/delete.png</normaloff>:/images/src/delete.png</iconset>
+               <iconset resource="src/ressources.qrc">
+                <normaloff>:/images/delete.png</normaloff>:/images/delete.png</iconset>
               </property>
              </widget>
             </item>
@@ -207,8 +210,8 @@
          <string/>
         </property>
         <attribute name="icon">
-         <iconset resource="ressources.qrc">
-          <normaloff>:/images/src/icon.png</normaloff>:/images/src/icon.png</iconset>
+         <iconset resource="src/ressources.qrc">
+          <normaloff>:/images/icon.png</normaloff>:/images/icon.png</iconset>
         </attribute>
         <attribute name="title">
          <string>Bus</string>
@@ -224,7 +227,7 @@
          </property>
          <layout class="QVBoxLayout" name="verticalLayout_3">
           <item>
-           <widget class="QTableView" name="tableView"/>
+           <widget class="QTableView" name="tableViewBus"/>
           </item>
           <item>
            <spacer name="horizontalSpacer_3">
@@ -260,8 +263,8 @@
                <string>Ajouter Bus</string>
               </property>
               <property name="icon">
-               <iconset resource="ressources.qrc">
-                <normaloff>:/images/src/add.png</normaloff>:/images/src/add.png</iconset>
+               <iconset resource="src/ressources.qrc">
+                <normaloff>:/images/add.png</normaloff>:/images/add.png</iconset>
               </property>
              </widget>
             </item>
@@ -271,8 +274,8 @@
                <string>Modifier Bus</string>
               </property>
               <property name="icon">
-               <iconset resource="ressources.qrc">
-                <normaloff>:/images/src/edit.png</normaloff>:/images/src/edit.png</iconset>
+               <iconset resource="src/ressources.qrc">
+                <normaloff>:/images/edit.png</normaloff>:/images/edit.png</iconset>
               </property>
              </widget>
             </item>
@@ -282,8 +285,8 @@
                <string>Supprimer Bus</string>
               </property>
               <property name="icon">
-               <iconset resource="ressources.qrc">
-                <normaloff>:/images/src/delete.png</normaloff>:/images/src/delete.png</iconset>
+               <iconset resource="src/ressources.qrc">
+                <normaloff>:/images/delete.png</normaloff>:/images/delete.png</iconset>
               </property>
              </widget>
             </item>
@@ -307,8 +310,8 @@
        </widget>
        <widget class="QWidget" name="tab_conducteur">
         <attribute name="icon">
-         <iconset resource="ressources.qrc">
-          <normaloff>:/images/src/driver32.png</normaloff>:/images/src/driver32.png</iconset>
+         <iconset resource="src/ressources.qrc">
+          <normaloff>:/images/driver32.png</normaloff>:/images/driver32.png</iconset>
         </attribute>
         <attribute name="title">
          <string>Conducteur</string>
@@ -324,7 +327,7 @@
          </property>
          <layout class="QVBoxLayout" name="verticalLayout_4">
           <item>
-           <widget class="QTableView" name="tableView_2"/>
+           <widget class="QTableView" name="tableViewConducteur"/>
           </item>
           <item>
            <spacer name="horizontalSpacer_2">
@@ -356,23 +359,29 @@
             </item>
             <item>
              <widget class="QPushButton" name="boutonAjouterConducteur">
+              <property name="enabled">
+               <bool>true</bool>
+              </property>
               <property name="text">
                <string>Ajouter Conducteur</string>
               </property>
               <property name="icon">
-               <iconset resource="ressources.qrc">
-                <normaloff>:/images/src/add.png</normaloff>:/images/src/add.png</iconset>
+               <iconset resource="src/ressources.qrc">
+                <normaloff>:/images/add.png</normaloff>:/images/add.png</iconset>
               </property>
              </widget>
             </item>
             <item>
              <widget class="QPushButton" name="boutonModifierConducteur">
+              <property name="enabled">
+               <bool>true</bool>
+              </property>
               <property name="text">
                <string>Modifier Conducteur</string>
               </property>
               <property name="icon">
-               <iconset resource="ressources.qrc">
-                <normaloff>:/images/src/edit.png</normaloff>:/images/src/edit.png</iconset>
+               <iconset resource="src/ressources.qrc">
+                <normaloff>:/images/edit.png</normaloff>:/images/edit.png</iconset>
               </property>
              </widget>
             </item>
@@ -382,8 +391,8 @@
                <string>Supprimer Conducteur</string>
               </property>
               <property name="icon">
-               <iconset resource="ressources.qrc">
-                <normaloff>:/images/src/delete.png</normaloff>:/images/src/delete.png</iconset>
+               <iconset resource="src/ressources.qrc">
+                <normaloff>:/images/delete.png</normaloff>:/images/delete.png</iconset>
               </property>
              </widget>
             </item>
@@ -407,8 +416,8 @@
        </widget>
        <widget class="QWidget" name="tab_reservation">
         <attribute name="icon">
-         <iconset resource="ressources.qrc">
-          <normaloff>:/images/src/clipboard-with-pencil-.png</normaloff>:/images/src/clipboard-with-pencil-.png</iconset>
+         <iconset resource="src/ressources.qrc">
+          <normaloff>:/images/clipboard-with-pencil-.png</normaloff>:/images/clipboard-with-pencil-.png</iconset>
         </attribute>
         <attribute name="title">
          <string>Reservation</string>
@@ -424,7 +433,7 @@
          </property>
          <layout class="QVBoxLayout" name="verticalLayout_5">
           <item>
-           <widget class="QTableView" name="tableView_3"/>
+           <widget class="QTableView" name="tableViewReservation"/>
           </item>
           <item>
            <spacer name="horizontalSpacer_4">
@@ -460,8 +469,8 @@
                <string>Ajouter Reservation</string>
               </property>
               <property name="icon">
-               <iconset resource="ressources.qrc">
-                <normaloff>:/images/src/add.png</normaloff>:/images/src/add.png</iconset>
+               <iconset resource="src/ressources.qrc">
+                <normaloff>:/images/add.png</normaloff>:/images/add.png</iconset>
               </property>
              </widget>
             </item>
@@ -471,8 +480,8 @@
                <string>Modifier Reservation</string>
               </property>
               <property name="icon">
-               <iconset resource="ressources.qrc">
-                <normaloff>:/images/src/edit.png</normaloff>:/images/src/edit.png</iconset>
+               <iconset resource="src/ressources.qrc">
+                <normaloff>:/images/edit.png</normaloff>:/images/edit.png</iconset>
               </property>
              </widget>
             </item>
@@ -482,8 +491,8 @@
                <string>Supprimer Reservation</string>
               </property>
               <property name="icon">
-               <iconset resource="ressources.qrc">
-                <normaloff>:/images/src/delete.png</normaloff>:/images/src/delete.png</iconset>
+               <iconset resource="src/ressources.qrc">
+                <normaloff>:/images/delete.png</normaloff>:/images/delete.png</iconset>
               </property>
              </widget>
             </item>
@@ -584,8 +593,8 @@
     <bool>true</bool>
    </property>
    <property name="icon">
-    <iconset resource="ressources.qrc">
-     <normaloff>:/images/src/bus.png</normaloff>:/images/src/bus.png</iconset>
+    <iconset resource="src/ressources.qrc">
+     <normaloff>:/images/bus.png</normaloff>:/images/bus.png</iconset>
    </property>
    <property name="text">
     <string>Ajouter  Bus</string>
@@ -599,8 +608,8 @@
     <bool>true</bool>
    </property>
    <property name="icon">
-    <iconset resource="ressources.qrc">
-     <normaloff>:/images/src/driver.png</normaloff>:/images/src/driver.png</iconset>
+    <iconset resource="src/ressources.qrc">
+     <normaloff>:/images/driver.png</normaloff>:/images/driver.png</iconset>
    </property>
    <property name="text">
     <string>Ajouter Conducteur</string>
@@ -614,8 +623,8 @@
     <bool>true</bool>
    </property>
    <property name="icon">
-    <iconset resource="ressources.qrc">
-     <normaloff>:/images/src/road.png</normaloff>:/images/src/road.png</iconset>
+    <iconset resource="src/ressources.qrc">
+     <normaloff>:/images/road.png</normaloff>:/images/road.png</iconset>
    </property>
    <property name="text">
     <string>Ajouter Voyage</string>
@@ -635,8 +644,8 @@
     <bool>true</bool>
    </property>
    <property name="icon">
-    <iconset resource="ressources.qrc">
-     <normaloff>:/images/src/booking.png</normaloff>:/images/src/booking.png</iconset>
+    <iconset resource="src/ressources.qrc">
+     <normaloff>:/images/booking.png</normaloff>:/images/booking.png</iconset>
    </property>
    <property name="text">
     <string>Ajouter Reservation</string>
@@ -656,7 +665,7 @@
  </widget>
  <layoutdefault spacing="6" margin="11"/>
  <resources>
-  <include location="ressources.qrc"/>
+  <include location="src/ressources.qrc"/>
  </resources>
  <connections>
   <connection>

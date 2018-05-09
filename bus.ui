@@ -3,12 +3,20 @@
  <class>Bus</class>
  <widget class="QWidget" name="Bus">
   <property name="windowModality">
-   <enum>Qt::ApplicationModal</enum>
+   <enum>Qt::NonModal</enum>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>371</width>
+    <height>200</height>
+   </rect>
   </property>
   <property name="minimumSize">
    <size>
     <width>371</width>
-    <height>233</height>
+    <height>200</height>
    </size>
   </property>
   <property name="maximumSize">
@@ -26,61 +34,58 @@
      <x>10</x>
      <y>10</y>
      <width>351</width>
-     <height>211</height>
+     <height>181</height>
     </rect>
    </property>
    <layout class="QVBoxLayout" name="verticalLayout">
     <item>
      <layout class="QFormLayout" name="formLayout">
-      <item row="0" column="1">
-       <widget class="QLineEdit" name="lineEdit"/>
-      </item>
-      <item row="1" column="0">
+      <item row="0" column="0">
        <widget class="QLabel" name="label_2">
         <property name="text">
          <string>Marque Bus</string>
         </property>
        </widget>
       </item>
-      <item row="1" column="1">
-       <widget class="QLineEdit" name="lineEdit_2"/>
+      <item row="0" column="1">
+       <widget class="QLineEdit" name="marqueBus"/>
       </item>
-      <item row="2" column="0">
+      <item row="1" column="0">
        <widget class="QLabel" name="label_3">
         <property name="text">
          <string>Plaque Bus</string>
         </property>
        </widget>
       </item>
-      <item row="2" column="1">
-       <widget class="QLineEdit" name="lineEdit_3"/>
+      <item row="1" column="1">
+       <widget class="QLineEdit" name="plaqueBus"/>
       </item>
-      <item row="3" column="0">
+      <item row="2" column="0">
        <widget class="QLabel" name="label_4">
         <property name="text">
          <string>Couleur</string>
         </property>
        </widget>
       </item>
-      <item row="3" column="1">
-       <widget class="QComboBox" name="comboBox"/>
+      <item row="2" column="1">
+       <widget class="QComboBox" name="couleurBus">
+        <property name="editable">
+         <bool>false</bool>
+        </property>
+        <property name="currentIndex">
+         <number>-1</number>
+        </property>
+       </widget>
       </item>
-      <item row="4" column="0">
+      <item row="3" column="0">
        <widget class="QLabel" name="label_5">
         <property name="text">
          <string>Nbre de place</string>
         </property>
        </widget>
       </item>
-      <item row="4" column="1">
-       <widget class="QSpinBox" name="spinBox"/>
-      </item>
-      <item row="0" column="0">
-       <widget class="QLabel" name="label">
-        <property name="text">
-         <string>Id Bus</string>
-        </property>
-       </widget>
+      <item row="3" column="1">
+       <widget class="QSpinBox" name="nombrePlaceBus"/>
       </item>
      </layout>
     </item>
@@ -100,21 +105,21 @@
        </spacer>
       </item>
       <item>
-       <widget class="QPushButton" name="pushButton_3">
+       <widget class="QPushButton" name="enregistrerBus">
         <property name="text">
          <string>Enregister</string>
         </property>
        </widget>
       </item>
       <item>
-       <widget class="QPushButton" name="pushButton_2">
+       <widget class="QPushButton" name="reinitialiserBus">
         <property name="text">
          <string>Reinitialiser</string>
         </property>
        </widget>
       </item>
       <item>
-       <widget class="QPushButton" name="pushButton">
+       <widget class="QPushButton" name="annulerBus">
         <property name="text">
          <string>Annuler</string>
         </property>
@@ -139,5 +144,22 @@
   </widget>
  </widget>
  <resources/>
- <connections/>
+ <connections>
+  <connection>
+   <sender>annulerBus</sender>
+   <signal>clicked()</signal>
+   <receiver>Bus</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>271</x>
+     <y>163</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>185</x>
+     <y>99</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
 </ui>
